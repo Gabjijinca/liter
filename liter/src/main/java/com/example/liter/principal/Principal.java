@@ -1,5 +1,8 @@
-package com.example.liter;
+package com.example.liter.principal;
 
+import com.example.liter.*;
+import com.example.liter.model.*;
+import com.example.liter.reposit.fraseReposit;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.ArrayList;
@@ -18,9 +21,9 @@ public class Principal {
     private fraseReposit reposit;
 
 
-    private authorReposit authorReposit;
+    private com.example.liter.reposit.authorReposit authorReposit;
 
-    public Principal(fraseReposit reposit, com.example.liter.authorReposit authorReposit) {
+    public Principal(fraseReposit reposit, com.example.liter.reposit.authorReposit authorReposit) {
         this.reposit = reposit;
         this.authorReposit = authorReposit;
     }
@@ -61,7 +64,7 @@ public class Principal {
                     for (autores author : rec.authors()) {
                         authorNames.add(author.name());
 
-                        author existingAuthor = authorReposit.findFirstByAuthorNamesAndTitle(author.name(), rec.title());
+                        com.example.liter.model.author existingAuthor = authorReposit.findFirstByAuthorNamesAndTitle(author.name(), rec.title());
                         if (existingAuthor == null) {
                             authorReposit.save(new author(
                                     rec.title(),

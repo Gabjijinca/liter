@@ -1,4 +1,4 @@
-package com.example.liter;
+package com.example.liter.model;
 
 public record recrecrec(String languages) {
     @Override

@@ -1,8 +1,7 @@
-package com.example.liter;
+package com.example.liter.reposit;
 
+import com.example.liter.model.pegatudoBank;
 import org.springframework.data.jpa.repository.JpaRepository;
-
-import java.util.Optional;
 
 public interface fraseReposit  extends JpaRepository<pegatudoBank,Long> {
     pegatudoBank findFirstByTitleAndAuthorNames(String title, String authorNames);

@@ -1,12 +1,11 @@
 package com.example.liter;
 
+import com.example.liter.principal.Principal;
+import com.example.liter.reposit.fraseReposit;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-import java.util.*;
-import java.util.stream.Collectors;
 
 @SpringBootApplication
 public class LiterApplication implements CommandLineRunner {
@@ -20,7 +19,7 @@ public class LiterApplication implements CommandLineRunner {
 
 
 	@Autowired
-	private authorReposit authorReposit;
+	private com.example.liter.reposit.authorReposit authorReposit;
 
 	@Override
 	public void run(String... args) throws Exception {

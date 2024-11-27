@@ -1,5 +1,6 @@
 package com.example.liter;
 
+import com.example.liter.model.apiResponse;
 import com.google.gson.Gson;
 
 import java.io.IOException;

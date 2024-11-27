@@ -1,4 +1,4 @@
-package com.example.liter;
+package com.example.liter.model;
 
 import java.util.List;
 
